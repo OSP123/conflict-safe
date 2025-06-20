@@ -1,0 +1,20 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Offline Shelter Finder</title>
+    <link rel="stylesheet" href="https://unpkg.com/maplibre-gl@2.9.2/dist/maplibre-gl.css" />
+    <link rel="manifest" href="/manifest.json" />
+  </head>
+  <body>
+    <noscript>Please enable JavaScript to run this app.</noscript>
+    <div id="root"></div>
+    <script type="module" src="/src/main.jsx"></script>
+    <script>
+      if ('serviceWorker' in navigator) {
+        navigator.serviceWorker.register('/sw.js');
+      }
+    </script>
+  </body>
+</html>
